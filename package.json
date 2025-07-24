@@ -1,0 +1,16 @@
+{
+  "name": "cf-trigger-wjoe",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker to trigger YouBike GitHub Actions",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+name = "cf-trigger-wjoe"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespace binding - will be created automatically on first deploy
+[[kv_namespaces]]
+binding = "CF_TRIGGER_KV"
+# The id will be automatically generated when you first deploy
+
+# Cron triggers - run every minute
+[triggers]
+crons = ["* * * * *"]
+
+# Default environment variables (can be overridden by .env file)
+[vars]
+# These will be overridden by your .env file values
+WORKER_NAME = "CF Trigger Worker"
+KV_NAMESPACE_NAME = "CF_TRIGGER_KV"
+
+# Note: Sensitive values should be added as secrets:
+# wrangler secret put GITHUB_PAT
